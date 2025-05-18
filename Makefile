@@ -175,7 +175,7 @@ install: boot
 	    $(if $(LEGACY_BOOT),pc-boot.img pc-core.img) shim$(EFI_ARCH).efi grub$(EFI_ARCH).efi \
 	    BOOT$(EFI_ARCH_UPPER).CSV fb$(EFI_ARCH).efi mm$(EFI_ARCH).efi \
 	    $(DESTDIR)/
-	install -m 644 grub.conf grub.cfg $(DESTDIR)/
+	install -m 644 grub.conf grub.cfg cmdline.extra $(DESTDIR)/
 	# For classic builds we also need to prime the gadget.yaml
 	mkdir -p $(DESTDIR)/meta
 	ln gadget-$(ARCH).yaml gadget.yaml
